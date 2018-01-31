@@ -14,8 +14,8 @@
 	}
 
 	function createLotteryNumbers() {
-		generateLotteryNumbers();
-		sortLotteryNumbers();
+		generateLotteryNumbers()
+		sortLotteryNumbers()
 		addToDOM();
 		lotteryNumbers = [];
 	}
@@ -49,11 +49,9 @@
 		let table = document.getElementById('tb-current-numbers');
 		let hasBody = table.childNodes.length != 0;
 		let length = hasBody? table.childNodes[0].childNodes.length: 0;
-
 		if (hasBody && length === 3) {
 			table.childNodes[0].childNodes[length - 1].remove();
 		}
-
 		let row = table.insertRow(hasBody && table.childNodes[0]);
 		lotteryNumbers.forEach((num) => {
 			let cell = row.insertCell();
